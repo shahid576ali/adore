@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff00;
+  color: #000000;
+  padding: 1rem 12rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar img{
+  width: 130px;
+}
+
+
+.navbar.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: all .2s ease-out;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+  position: relative;
+  display: flex;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-links li :nth-child(even){
+  transform: rotate(90deg);
+  margin-top: 2px;
+  width: 24px;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+svg {
+  margin-left: 5px;
+  vertical-align: middle;
+  stroke: #ffffff;
+}
+
+.navbar.scrolled .nav-links a {
+  color: #000000;
+}
+
+.navbar.scrolled svg {
+  stroke: #000000;
+}
